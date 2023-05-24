@@ -11,6 +11,11 @@ const Login = (props) => {
   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
 
+  // useEffect는 두 가지 인자를 받는다. 첫번째 인자로 의존성이 변경되었을 때 실행될 함수, 두번째 인자로 의존성이 담긴 배열을 받는다.
+  // 이 때 의존성 배열을 인자로 넣지 않으면, 첫번째 인자로 설정된 함수는 컴포넌트가 렌더링 될 때 마다 실행된다.
+  // 의존성 배열로 빈 배열을 넣으면, 함수는 컴포넌트가 처음 렌더링 되었을 때 딱 한 번 실행된다. 그 이후로는 의존성이 변경되지 않기 때문이다.
+  // 의존성 배열에 담긴 요소가 변경될 때 함수는 실행된다.
+
   useEffect(() => {
     const identifier = setTimeout(() => {
       console.log("Checking form validity");
