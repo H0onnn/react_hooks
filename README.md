@@ -1,3 +1,7 @@
-# react_useEffect
+# react_Hooks
 
-react의 useEffect를 다루는 법에 대해 학습합니다.
+react의 내장 hook에 대해 공부합니다.
+
+- useEffect
+- useReducer
+- useContext
